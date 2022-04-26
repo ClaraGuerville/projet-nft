@@ -1,0 +1,19 @@
+{
+  "name": "projet-nft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/scss/style.scss:./public/assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaraGuerville/projet-nft.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClaraGuerville/projet-nft/issues"
+  },
+  "homepage": "https://github.com/ClaraGuerville/projet-nft#readme"
+}
