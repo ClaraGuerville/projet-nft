@@ -1,0 +1,10 @@
+$dark-footer-color: #190B2D;
+$light-footer-color: #E5D6FF;
+
+$light-violet: #6B10FF;
+$dark-violet: rgba(103, 26, 204); 
+
+@mixin btn-linear-gradient {
+	background: linear-gradient(90deg, rgba(103, 26, 204, 0.83) 0%, #6B10FF 50%);
+	box-shadow: 0px 2px 8px rgba(107, 16, 255, 0.35);
+}

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch assets/scss/style.scss:./public/assets/css/style.css",
-    "sass-gallery": "sass --watch assets/scss/gallery.scss:./public/assets/css/style.css"
+    "sass-gallery": "sass --watch assets/scss/gallery.scss:./public/assets/css/style.css",
+    "ld-sass": "sass --watch assets/scss/lucile.scss:./public/assets/css/style.css"
   },
   "repository": {
     "type": "git",
