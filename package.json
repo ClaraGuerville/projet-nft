@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch assets/scss/style.scss:./public/assets/css/style.css"
+    "sass": "sass --watch assets/scss/style.scss:./public/assets/css/style.css",
+    "sass-gallery": "sass --watch assets/scss/gallery.scss:./public/assets/css/style.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ClaraGuerville/projet-nft/issues"
   },
-  "homepage": "https://github.com/ClaraGuerville/projet-nft#readme"
+  "homepage": "https://github.com/ClaraGuerville/projet-nft#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
 }
