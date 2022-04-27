@@ -21,11 +21,25 @@ $theme-colors: (
   "obscur": $obscur,
   "bright": $bright,
   "gradient": $gradient,
-  "gradient-hover": $gradient-hover
+  "gradient-hover": $gradient-hover,
+  "pink": $pink
 );
 
 @import './../../node_modules/bootstrap/scss/bootstrap.scss';
 
 .nav-puce{
     list-style-type: none;
+}
+
+.circle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border-style:solid;
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 }
