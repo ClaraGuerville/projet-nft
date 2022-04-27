@@ -2,17 +2,63 @@
 //              Lucile's part               //
 //////////////////////////////////////////////
 /*IMPORT*/
-@import 'ld-variables.scss';
+@import './variables';
+
+@import './../../node_modules/bootstrap/scss/functions';
+@import './../../node_modules/bootstrap/scss/variables';
+@import './../../node_modules/bootstrap/scss/mixins';
+@import './../../node_modules/bootstrap/scss/utilities';
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "purple":     $purple,
+  "light-purple": $light-purple,
+  "dark-purple": $dark-purple,
+  "obscur": $obscur,
+  "bright": $bright,
+  "gradient": $gradient,
+  "gradient-hover": $gradient-hover
+);
+
+@import './../../node_modules/bootstrap/scss/bootstrap.scss';
 
 /*GENERAL*/
-.small-caps{font-variant-caps: all-small-caps }
 .bb{border: 1px solid red }
 
+.purple-color{color: $purple; }
+
+.no-decoration{text-decoration: none; }
+
 /*LOGIN*/
+.user_form_bg{
+	// background-image: url('');
+	background-size: 50%;
+	// background-position: 0%;
+}
+
+#login-main>.row{
+	border: solid 2px blue;
+}
 
 /*REGISTER*/
 
 /*NFT INFOS*/
+.ld-bg-purple {background-color: $purple; }
+
+.form_input{
+	border: solid 2px $gradient;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 12px;
+	padding: 9px 12px;
+}
+
 
 //////////////////////////////////////////////
 //            Lucile's part end             //
