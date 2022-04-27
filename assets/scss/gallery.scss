@@ -26,4 +26,6 @@ $theme-colors: (
 
 @import './../../node_modules/bootstrap/scss/bootstrap.scss';
 
-
+.nav-puce{
+    list-style-type: none;
+}
