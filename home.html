@@ -11,28 +11,70 @@
 </head>
 
 <body class="font-style">
-    <div class="container section-header">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-6 d-flex flex-column">
-                <h1 class="heading-1 pt-5">Découvrez une grande <br> sélection de NFTs</h1>
-                <p class="baseline">Achetez et revendez les NFTs des plus grands <br> artistes du monde entier</p>
+    <!-- ----------NAVBAR N°2------------- -->
+
+    <div class="container pt-2 pb-4">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!-- <div class="col-12 col-md-4"> -->
+                <a class="navbar-brand fw-bold" href="#"><img src="public/assets/img/logo.svg" alt="Logo"> Lobos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <!-- </div> -->
+           
+            <!-- <div class="col-8"> -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark mx-3" href="">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark mx-3" href="">Explorer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark mx-3" href="">Créer ma collection</a>
+                        </li>
+                    </ul>
+                  
+                    <div class="d-flex nav-puce justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark mx-3" href="">S'inscrire</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="">Se connecter</a>
+                            </li>                                                                
+                    </div>
+                </div>
+            <!-- </div>   -->
+        </nav>
+    </div> 
+
+    <!--            Section : Header            -->
+    <div class="container section-header pt-5">
+        <div class="row justify-content-between flex-column-reverse flex-lg-row align-items-center m-0">
+            <div class="col-12 col-lg-6 d-flex flex-column align-text">
+                <h1 class="heading-1 mt-5">Découvrez une grande sélection de NFTs</h1>
+                <p class="baseline">Achetez et revendez les NFTs des plus grands artistes du monde entier</p>
                 <div class="btn-section mt-3">
                     <button type="button" class="btn btn-gradient me-2">Explorer</button>
                     <button type="button" class="btn btn-outline-gradient border-3">Créer</button>
                 </div>
             </div>
-            <div class="col-5 d-flex justify-content-end header-img">
+            <div class="col-12 col-lg-5 d-flex justify-content-center header-img">
                 <img src="/public/assets/img/header-img.png" alt="image représentant une card NFT">
             </div>
         </div>
     </div>
-    <div class="section-explanations py-5">
+    <!--            Fin section : Header            -->
+
+    <!--            Section : Explication du concept            -->
+    <div class="section-explanations py-5 spacing">
         <div class="container">
             <div class="row pb-5">
                 <h2 class="heading-2 pb-3">Créez et vendez vos NFTs en toute simplicité</h2>
             </div>
             <div class="row">
-                <div class="col-12 d-flex justify-content-between">
+                <div class="col-12 d-flex justify-content-between flex-column flex-lg-row">
                     <div class="d-flex flex-column">
                         <div class="row pb-4">
                             <svg width="51" height="50" viewBox="0 0 51 50" fill="none"
@@ -56,13 +98,13 @@
                         <div class="row">
                             <h3 class="heading-3">Installez votre wallet</h3>
                         </div>
-                        <div class="row">
-                            <p>Une fois que vous avez installé le wallet <br> de votre choix, connectez-le à Logoipsum
-                                <br> en
-                                cliquant sur “ajouter à mon wallet”</p>
+                        <div class="row px-lg-5">
+                            <p>Une fois que vous avez installé le wallet de votre choix, connectez-le à Logoipsum en
+                                cliquant sur “ajouter à mon wallet”
+                            </p>
                         </div>
                     </div>
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column mt-5 mt-lg-0">
                         <div class="row pb-4">
                             <svg width="47" height="47" viewBox="0 0 47 47" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -84,48 +126,212 @@
                         <div class="row">
                             <h3 class="heading-3">Créez votre collection</h3>
                         </div>
-                        <div class="row">
-                            Créer votre collection en cliquant sur <br> “Créer ma collection”. Configurez ensuite <br>
-                            votre profil en quelques clics
+                        <div class="row px-lg-5">
+                            Créer votre collection en cliquant sur “Créer ma collection”. Configurez ensuite votre
+                            profil en quelques clics
                         </div>
                     </div>
-                    <div class="d-flex flex-column">
-                        <div class="row pb-4"">
+                    <div class="d-flex flex-column mt-5 mt-lg-0">
+                        <div class="row pb-4">
                             <svg width=" 50" height="50" viewBox="0 0 50 50" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_34_101)">
-                                <path
-                                    d="M13.0208 40.625C9.68541 40.625 6.71875 38.4896 5.64166 35.3104L5.56875 35.0708C5.31458 34.2292 5.20833 33.5208 5.20833 32.8125V18.6083L0.154161 35.4792C-0.495839 37.9604 0.985411 40.5333 3.47083 41.2188L35.6854 49.8459C36.0875 49.95 36.4896 50 36.8854 50C38.9604 50 40.8563 48.6229 41.3875 46.5938L43.2646 40.625H13.0208Z"
-                                    fill="#914EFF" />
-                                <path
-                                    d="M18.75 18.75C21.048 18.75 22.9167 16.8813 22.9167 14.5834C22.9167 12.2854 21.048 10.4167 18.75 10.4167C16.4521 10.4167 14.5834 12.2854 14.5834 14.5834C14.5834 16.8813 16.4521 18.75 18.75 18.75Z"
-                                    fill="white" />
-                                <path
-                                    d="M44.7917 4.16669H13.5417C10.6709 4.16669 8.33337 6.50419 8.33337 9.37502V32.2917C8.33337 35.1625 10.6709 37.5 13.5417 37.5H44.7917C47.6626 37.5 50.0001 35.1625 50.0001 32.2917V9.37502C50.0001 6.50419 47.6626 4.16669 44.7917 4.16669ZM13.5417 8.33335H44.7917C45.3667 8.33335 45.8334 8.80002 45.8334 9.37502V24.1646L39.2521 16.4854C38.5542 15.6667 37.5438 15.2292 36.4584 15.2042C35.3792 15.2104 34.3667 15.6896 33.6751 16.5188L25.9375 25.8063L23.4167 23.2917C21.9917 21.8667 19.673 21.8667 18.25 23.2917L12.5 29.0396V9.37502C12.5 8.80002 12.9667 8.33335 13.5417 8.33335Z"
-                                    fill="white" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_34_101">
-                                    <rect width="50" height="50" fill="white" />
-                                </clipPath>
-                            </defs>
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_34_101)">
+                                    <path
+                                        d="M13.0208 40.625C9.68541 40.625 6.71875 38.4896 5.64166 35.3104L5.56875 35.0708C5.31458 34.2292 5.20833 33.5208 5.20833 32.8125V18.6083L0.154161 35.4792C-0.495839 37.9604 0.985411 40.5333 3.47083 41.2188L35.6854 49.8459C36.0875 49.95 36.4896 50 36.8854 50C38.9604 50 40.8563 48.6229 41.3875 46.5938L43.2646 40.625H13.0208Z"
+                                        fill="#914EFF" />
+                                    <path
+                                        d="M18.75 18.75C21.048 18.75 22.9167 16.8813 22.9167 14.5834C22.9167 12.2854 21.048 10.4167 18.75 10.4167C16.4521 10.4167 14.5834 12.2854 14.5834 14.5834C14.5834 16.8813 16.4521 18.75 18.75 18.75Z"
+                                        fill="white" />
+                                    <path
+                                        d="M44.7917 4.16669H13.5417C10.6709 4.16669 8.33337 6.50419 8.33337 9.37502V32.2917C8.33337 35.1625 10.6709 37.5 13.5417 37.5H44.7917C47.6626 37.5 50.0001 35.1625 50.0001 32.2917V9.37502C50.0001 6.50419 47.6626 4.16669 44.7917 4.16669ZM13.5417 8.33335H44.7917C45.3667 8.33335 45.8334 8.80002 45.8334 9.37502V24.1646L39.2521 16.4854C38.5542 15.6667 37.5438 15.2292 36.4584 15.2042C35.3792 15.2104 34.3667 15.6896 33.6751 16.5188L25.9375 25.8063L23.4167 23.2917C21.9917 21.8667 19.673 21.8667 18.25 23.2917L12.5 29.0396V9.37502C12.5 8.80002 12.9667 8.33335 13.5417 8.33335Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_34_101">
+                                        <rect width="50" height="50" fill="white" />
+                                    </clipPath>
+                                </defs>
                             </svg>
                         </div>
-                        <div class="row">
+                        <div class="row ">
                             <h3 class="heading-3">Ajoutez vos NFTs</h3>
                         </div>
-                        <div class="row">
-                            <p>Téléchargez votre travail, puis ajoutez les <br> informations de votre NFT. Et c’est fait
-                                ! Votre <br> travail est désormais disponible à l’achat.</p>
+                        <div class="row px-lg-5">
+                            <p>Téléchargez votre travail, puis ajoutez les informations de votre NFT. Et c’est fait
+                                ! Votre travail est désormais disponible à l’achat.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container section-trending">
+    <!--            Fin section : Explication du concept            -->
+
+    <!--            Section : Dernières tendances            -->
+    <div class="container section-trending spacing">
         <h2 class="heading-2">Les dernières tendances</h2>
     </div>
+    <div class="container card-trending mt-4">
+        <div class="row">
+            <div class="col-lg-4 col-12">
+                <div class="card card-radius">
+                    <img src="public/assets/img/moonbirds-nft.png" class="card-img-top img-radius" alt="NFT">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3 class="heading-3-bold card-title">#2734</h3>
+                                <div class="d-flex align-items-center">
+                                    <p class="card-text my-2 pe-2">Moonbirds</p>
+                                    <img src="/public/assets/img/verify.svg" alt="">
+                                 </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="circle ms-auto">
+                                    <img src="public/assets/img/moonbirds-avatar.png" alt="Avatar">
+                                </div>
+                            </div>
+                            <hr class="my-3">
+                            <div class="col-6">
+                                <div class="d-flex">
+                                    <img src="public/assets/img/weth.svg" alt="icone ethereum">
+                                    <h3 class="heading-3-bold m-2">20.5</h3>
+                                </div>
+                                <p class="mb-0">2 jours restants</p>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end align-items-center">
+                                <img src="/public/assets/img/heart.svg" class="icon" alt="like">
+                                <p class="m-2 likes">57</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-12 mt-4 mt-lg-0">
+                <div class="card card-radius">
+                    <img src="public/assets/img/los-muertos-nft.png" class="card-img-top img-radius" alt="NFT">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-8">
+                                <h3 class="heading-3-bold card-title">#5608</h3>
+                                <div class="d-flex align-items-center">
+                                    <p class="card-text my-2 pe-2">Los Muertos</p>
+                                    <img src="/public/assets/img/verify.svg" alt="">
+                                 </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="circle ms-auto">
+                                    <img src="public/assets/img/los-muertos-avatar.gif" alt="Avatar">
+                                </div>
+                            </div>
+                            <hr class="my-3">
+                            <div class="col-6">
+                                <div class="d-flex">
+                                    <img src="public/assets/img/eth.svg" alt="icone ethereum">
+                                    <h3 class="heading-3-bold m-2">0.45</h3>
+                                </div>
+                                <p class="mb-0">2 jours restants</p>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end align-items-center">
+                                <img src="/public/assets/img/heart.svg" class="icon" alt="like">
+                                <p class="m-2 likes">57</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-12 mt-4 mt-lg-0">
+                <div class="card card-radius">
+                    <img src="public/assets/img/dtp-nft.png" class="card-img-top img-radius" alt="NFT">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-9">
+                                <h3 class="heading-3-bold card-title">#1834</h3>
+                                <div class="d-flex align-items-center">
+                                    <p class="card-text my-2 pe-2">Degenerate Trash Pandas</p>
+                                    <img src="/public/assets/img/verify.svg" alt="">
+                                 </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="circle ms-auto">
+                                    <img src="public/assets/img/dtp-avatar.png" alt="Avatar">
+                                </div>
+                            </div>
+                            <hr class="my-3">
+                            <div class="col-6">
+                                <div class="d-flex">
+                                    <img src="public/assets/img/sol.svg" alt="icone ethereum">
+                                    <h3 class="heading-3-bold m-2">26.69</h3>
+                                </div>
+                                <p class="mb-0">2 jours restants</p>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end align-items-center">
+                                <img src="/public/assets/img/heart.svg" class="icon" alt="like">
+                                <p class="m-2 likes">57</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--            Fin section : Dernières tendances            -->
+
+    <!--            Section : Listing de catégories            -->
+    <div class="container section-category spacing">
+        <h2 class="heading-2">Rechercher par catégorie</h2>
+    </div>
+    <div class="container card-category mt-4 pb-5">
+        <a href="" class="d-block element-1 d-flex flex-column-reverse">
+            <h2 class="heading-2 text-white m-0 p-4">Art</h2>
+        </a>
+
+        <a href="" class="d-block element-2 d-flex flex-column-reverse">
+            <h3 class="heading-3-bold text-white m-0 p-3">Metavers</h3>
+        </a>
+        <a href="" class="d-block element-3 d-flex flex-column-reverse">
+            <h3 class="heading-3-bold text-white m-0 p-3">Photographie</h3>
+
+        </a>
+        <a href="" class="d-block element-4 d-flex flex-column-reverse">
+            <h3 class="heading-3-bold text-white m-0 p-3">Musique</h3>
+        </a>
+        <a href="" class="d-block element-5 d-flex flex-column-reverse">
+            <h3 class="heading-3-bold text-white m-0 p-3">Sport</h3>
+        </a>
+    </div>
+    <!--            Fin section : Listing de catégories            -->
+
+    <!--            Section : Footer            -->
+    <footer class="spacing">
+        <div class="row preFooterManagement m-0 py-5">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <h2 class="preFooterManagement__title">Explorer la galerie</h2>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <p>Découvrez plus de 1M de NFTs de tous
+                    horizons</p>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-gradient me-2">Explorer le
+                    marketplace</button>
+            </div>
+        </div>
+        <div class="row footerManagement m-0 p-3">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <p>Travail réalisé dans le cadre d'un
+                    exercice de L'école des
+                    métiers du numérique, La Manu.</p>
+            </div>
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <p class="footerManagement__paragrpah footerManagement__paragrpah--bold">Réalisé
+                    par Lucile, Wesley,
+                    Clara</p>
+            </div>
+        </div>
+    </footer>
+    <!--            Fin section : Footer            -->
 
 
     <!-- javascript files -->
