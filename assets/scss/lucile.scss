@@ -3,6 +3,7 @@
 //////////////////////////////////////////////
 /*IMPORT*/
 @import './variables';
+@import './mixins';
 
 @import './../../node_modules/bootstrap/scss/functions';
 @import './../../node_modules/bootstrap/scss/variables';
@@ -29,36 +30,87 @@ $theme-colors: (
 
 @import './../../node_modules/bootstrap/scss/bootstrap.scss';
 
-/*GENERAL*/
-.bb{border: 1px solid red }
+/*GENERAL STYLES*/
 
-.purple-color{color: $purple; }
+/* btn primary with gradient */
+.violet_gradient_btn{
+	padding: 16px 40px;
+	background: linear-gradient(90deg, #843BE2 0%, #6B10FF 100%);
+	border-radius: 12px;
+
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 21px;
+	letter-spacing: 0.03em;
+
+	color: #FFFFFF;
+}
+
+/* Texts & link's styles */
+.violet_gradient_btn:hover{
+	color: white;
+	background: linear-gradient(90deg, #6B10FF 0%, #843BE2 100%);
+}
+
+.small_purple_link{@include body_small($purple); }
+
+.small_text{font-size: $body_small; }
 
 .no-decoration{text-decoration: none; }
 
-/*LOGIN*/
-.user_form_bg{
-	// background-image: url('');
-	background-size: 50%;
-	// background-position: 0%;
+.small-caps{font-variant-caps: all-small-caps; }
+
+.no-border{
+	border: none;
 }
 
-#login-main>.row{
-	border: solid 2px blue;
+/* placements & marge */
+.flex-center{@include flex_center; }
+
+/* debug */
+.bb{border: .5px solid red }
+
+/*LOGIN & REGISTER*/
+
+// bg of the login & the register pages
+.user_form_bg {
+	height: inherit;
+	background-image: url('../img/form-image.png');
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
 }
 
-/*REGISTER*/
+.user-form {
+	// only the first row 
+	.row:first-child {
+		min-height: 100vh;
+		// border: solid 2px blue;
+	}
+	
+	// input type text
+	&__input {
+		// appearance
+		border: solid 1px $gradient;
+		background: rgba(255, 255, 255, 0.7);
+		border-radius: 12px;
+		padding: 8px 12px;
+		// text
+		@include body_small($placeholder-grey);
+	}
+}
+
+.search-bar {
+	width: 483px;
+	padding: 10px 30px;
+	border-radius: 12px;
+	border: 0;
+
+	background: #ECECEC;
+	color: $placeholder-grey;
+}
 
 /*NFT INFOS*/
-.ld-bg-purple {background-color: $purple; }
-
-.form_input{
-	border: solid 2px $gradient;
-	background: rgba(255, 255, 255, 0.7);
-	border-radius: 12px;
-	padding: 9px 12px;
-}
-
 
 //////////////////////////////////////////////
 //            Lucile's part end             //

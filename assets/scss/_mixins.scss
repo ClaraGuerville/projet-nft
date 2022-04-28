@@ -1,0 +1,15 @@
+@mixin flex_center {
+	justify-content: center;
+	align-items: center;
+}
+
+/*font styles*/
+
+@mixin body_small($color) {
+	/* body small */
+	// font-family: 'Work Sans';
+	font-weight: 400;
+	font-size: $body_small;
+	line-height: 24px;
+	color: $color;
+}

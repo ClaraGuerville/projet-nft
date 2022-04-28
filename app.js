@@ -3,6 +3,9 @@ const express = require("express");
 // récupère le rendu de home.js
 const homeRouter = require('./routes/home');
 
+// apporte dans app 2eme router
+const albumRouter = require('./routes/album');
+
 // instance 
 // new : par déclaration qd plus gourment, mais sinon objet 
 const app = express();
@@ -17,18 +20,34 @@ const app = express();
 app.set('view engine', 'ejs');
 
 /**
+ * midllewares traitement des données
+ * parse du json et le met dans la request
+ * renvoient object JS
+ */
+app.use(express.json()); 
+
+app.use(
+    express.urlencoded({
+        extended: false
+}));
+
+/**
  * js : pour que les req soit intercepter, lui dire s c du get, post etc.
  * créer middleware pour intercepter requete
  * peut importe requete qu'on envoie (get/post), use intercepte
  *
  * middleware 'use(avec function callback)''
  */
-/*
+
+/**
  * quand req reçu, doit dire de faire qqch avec la reponse. Si ne dit pas quoi faire avec la réponse, client est en attente de faire qqch.
  *
  * defini l'entete, renvoie json si api, affiche vue si mvc etc...
  */ 
 app.use(homeRouter);
+// routes de l'album sont dispo
+// préfixe pour les autres routes pour lisibilité.
+app.use('/albums', albumRouter);
 
 /**
  * export module : permet d'utiliser cette var dans un autre fichier

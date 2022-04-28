@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="public/assets/css/style.css">
+      <title>S'inscrire</title>
+  </head>
+  <body>
+      <main class="user-form container-fluid">
+
+        <!-- two part container -->
+        <div class="row ">
+          <!-- image container -->
+          <aside class="user_form_bg col-md-6 ps-0">
+          </aside>
+
+          <!-- form container -->
+          <form class="col-md-6">
+            <div class="row flex-center h-100"> 
+              <div class="col-md-7">
+                <div class="row flex-column flex-center gap-4">
+                  <!-- form title -->
+                  <h2 class="fw-bold text-center">Inscription à votre espace</h2>
+                  <!-- peudonym input -->
+                  <div class="px-4">
+                    <label for="pseudonym" class="d-block mb-2">Pseudo</label>
+                    <input
+                      id="pseudonym"
+                      name="pseudonym"
+                      type="text"
+                      placeholder="Saisir votre pseudo" 
+                      class="user-form__input w-100"/>
+                  </div>
+
+                  <!-- pwd input -->
+                  <div class="px-4">
+                    <label for="password" class="d-block mb-2">Mot de passe</label>
+                    <input
+                      id="password"
+                      name="password"
+                      type="text"
+                      placeholder="Saisir votre mot de passe" 
+                      class="user-form__input w-100""/>
+                  </div>
+
+                  <!-- pwd input -->
+                  <div class="px-4">
+                    <label for="repeat_password" class="d-block mb-2">Confirmer le mot de passe</label>
+                    <input
+                      id="repeat_password"
+                      name="repeat_password"
+                      type="text"
+                      placeholder="Confirmer le mot de passe" 
+                      class="user-form__input w-100""/>
+                  </div>
+                  
+                  <!-- connexion button -->
+                  <div class="px-4 mt-4">
+                    <input 
+                      type="button" 
+                      value="S'inscrire" 
+                      class="btn violet_gradient_btn w-100"/>
+
+                    <span class="d-block text-center small_text mt-2">Déjà menmbre ? <a href="login.html" class="small_purple_link no-decoration">Connectez-vous</a>.</span>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+  </body>
+</html>

@@ -5,49 +5,62 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="public/assets/css/style.css">
-      <title>projet-nft</title>
+      <title>Connexion</title>
   </head>
-  <body class="user_form_bg">
-      <main id="login-main" class="container-fluid">
+  <body>
+      <main class="user-form container-fluid">
 
         <!-- two part container -->
-        <div class="row flex-row-reverse">
+        <div class="row ">
+          <!-- image container -->
+          <aside class="user_form_bg col-md-6 ps-0">
+          </aside>
+
           <!-- form container -->
-          <div class="bb col-md-6">
-            <div class="row flex-column gap-4">
-              <!-- form title -->
-              <h2>Se connecter à votre espace</h2>
-              <!-- peudonym input -->
-              <div class="">
-                <label for="pseudonym" class="d-block">pseudo</label>
-                <input
-                  id="pseudonym"
-                  name="pseudonym"
-                  type="text"
-                  placeholder="saisir votre pseudo" 
-                  class="border rounded"/>
-              </div>
+          <form action="" method="post" class="col-md-6">
+            <div class="row flex-center h-100"> 
+              <div class="col-md-7">
+                <div class="row flex-column flex-center gap-4">
+                  <!-- form title -->
+                  <h2 class="fw-bold text-center">Connexion à votre espace</h2>
+                  <!-- peudonym input -->
+                  <div class="px-4">
+                    <label for="pseudonym" class="d-block mb-2">Pseudo</label>
+                    <input
+                      id="pseudonym"
+                      name="pseudonym"
+                      type="text"
+                      placeholder="Saisir votre pseudo" 
+                      class="user-form__input w-100"/>
+                  </div>
 
-              <!-- pwd input -->
-              <div class="">
-                <label for="password" class="d-block">Mot de passe</label>
-                <input
-                  id="password"
-                  name="password"
-                  type="text"
-                  placeholder="saisir votre mot de passe" 
-                  class=""/>
-                  <a href="#" class="d-block purple-color no-decoration">Mot de passe oublié ?</a>
-              </div>
-              
-              <!-- connexion button -->
-              <div class="">
-                <input type="button" value="Se connecter" class="btn purple-btn">
-                <span class="d-block text-center fs-6">Pas de compte ? <a href="register.html" class="purple-color no-decoration">Inscrivez-vous</a>.</span>
-              </div>
+                  <!-- pwd input -->
+                  <div class="px-4">
+                    <label for="password" class="d-block mb-2">Mot de passe</label>
+                    <input
+                      id="password"
+                      name="password"
+                      type="text"
+                      placeholder="Saisir votre mot de passe" 
+                      class="user-form__input w-100""/>
+                      <a href="#" class="small_purple_link d-block no-decoration">Mot de passe oublié ?</a>
+                  </div>
+                  
+                  <!-- connexion button -->
+                  <div class="px-4 mt-4">
+                    <input 
+                      type="submit" 
+                      value="Se connecter" 
+                      class="btn violet_gradient_btn w-100"/>
 
+                    <span class="d-block text-center small_text mt-2">Pas de compte ? <a href="register.html" class="small_purple_link no-decoration">Inscrivez-vous</a>.</span>
+
+                  </div>
+                </div>
+
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </main>
   </body>

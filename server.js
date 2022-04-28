@@ -22,7 +22,3 @@ const server = http.createServer(app);
  * Si il existe un var d'envi, la prendre, sinon 3000.
  */
 server.listen(process.env.PORT || 3000);
-
-/**
- * 
- */
