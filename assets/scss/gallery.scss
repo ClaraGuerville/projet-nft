@@ -22,13 +22,43 @@ $theme-colors: (
   "bright": $bright,
   "gradient": $gradient,
   "gradient-hover": $gradient-hover,
-  "pink": $pink
 );
+
 
 @import './../../node_modules/bootstrap/scss/bootstrap.scss';
 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+
 .nav-puce{
     list-style-type: none;
+}
+
+.bgc-purple{
+  background-color: $purple;
+}
+
+.bgc-light-purple{
+  background-color: $light-purple;
+}
+
+.bgc-dark-purple{
+  background-color: $dark-purple;
+}
+
+.bgc-obscur{
+  background-color: $obscur;
+}
+
+.bgc-bright{
+  background-color: $bright;
+}
+
+.bgc-gradient{
+  background-color: $gradient;
+}
+
+.bgc-gradient-hover{
+  background-color: $gradient-hover;
 }
 
 .circle {
@@ -42,4 +72,108 @@ $theme-colors: (
       border-radius: 50%;
       object-fit: cover;
     }
+}
+
+.headerManagement{
+  background-color: $purple;
+  height: 10vh;
+    &__text{
+      color: $bright;
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding-left: 30%;
+      padding-top: 20px;
+    }
+}
+
+.btnFilter{
+  width: 151px;
+  height: 43px;
+  border-radius: 12px;
+  padding: 8px, 16px, 8px, 16px;
+  color: $obscur;
+  margin: 0px 12px;
+}
+
+.btnCreate{
+  width: 198px;
+  height: 43px;
+  border-radius: 12px;
+  border-style: 20px solid;
+  padding: 12px, 40px, 12px, 40px;
+  font-weight: bold;
+  margin: 0px 12px;
+}
+
+.preFooterManagement{
+  background-color: $light-purple;
+    &__title{
+      color: $obscur;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    &__paragraph{
+      font-size: 20px;
+      text-align: center;
+    }
+    &__button{
+      width: 304px;
+      height: 53px;
+      border-radius: 12px;
+      background-color: $gradient;
+      padding: 16px, 40px, 16px, 40px;
+    }
+}
+
+.footerManagement{
+  background-color: $obscur;
+
+    &__paragraph{
+      font-size: 16px;
+      color: $bright;
+      text-align: center;
+
+      &--bold{
+        font-weight: bold;
+      }
+    }    
+}
+
+.fence{
+  display: flex;
+  justify-content: center;
+}
+
+.raillings{
+  width: 90vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  grid-gap: 30px;
+}
+
+.postcard{
+  border: .5px solid;
+  border-radius: 5px;
+  /* Au hover */
+  transition: 0.5s ease;
+  cursor: pointer;
+  background-color: $bright;
+}
+
+.customCard{
+  width: 300px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.card-radius{
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+.img-radius{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
