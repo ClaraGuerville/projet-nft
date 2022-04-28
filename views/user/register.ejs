@@ -4,11 +4,15 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="public/assets/css/style.css">
+      <link rel="stylesheet" href="/assets/css/style.css">
       <title>S'inscrire</title>
   </head>
   <body>
       <main class="user-form container-fluid">
+
+        <% if(locals.success) { %>
+          <p><%= success %></p>
+        <% } %>
 
         <!-- two part container -->
         <div class="row ">
@@ -17,7 +21,7 @@
           </aside>
 
           <!-- form container -->
-          <form class="col-sm-7 col-lg-6 my-sm-5 my-lg-0">
+          <form action="" method="post" class="col-sm-7 col-lg-6 my-sm-5 my-lg-0">
             <div class="row flex-center h-100"> 
               <div class="col-12 col-md-11 col-lg-11 col-xl-9 col-xxl-7">
                 <div class="row flex-column flex-center gap-4">
@@ -37,12 +41,13 @@
 
                   <!-- peudonym input -->
                   <div class="px-4">
-                    <label for="pseudonym" class="d-block mb-2">Pseudo</label>
+                    <label for="pseudo" class="d-block mb-2">Pseudo</label>
                     <input
-                      id="pseudonym"
-                      name="pseudonym"
+                      id="pseudo"
+                      name="pseudo"
                       type="text"
-                      value="pseudonym"
+                      value="pseudo"
+                      required="required"
                       placeholder="Saisir votre pseudo" 
                       class="user-form__input w-100"/>
                   </div>
@@ -55,18 +60,20 @@
                       name="password"
                       type="text"
                       value="password"
+                      required="required"
                       placeholder="Saisir votre mot de passe" 
                       class="user-form__input w-100""/>
                   </div>
 
-                  <!-- pwd input -->
+                  <!-- repeat pwd input -->
                   <div class="px-4">
-                    <label for="repeat_password" class="d-block mb-2">Confirmer le mot de passe</label>
+                    <label for="repeatPassword" class="d-block mb-2">Confirmer le mot de passe</label>
                     <input
-                      id="repeat_password"
-                      name="repeat_password"
+                      id="repeatPassword"
+                      name="repeatPassword"
                       type="text"
                       value="password"
+                      required="required"
                       placeholder="Confirmer le mot de passe" 
                       class="user-form__input w-100""/>
                   </div>
@@ -74,7 +81,7 @@
                   <!-- connexion button -->
                   <div class="px-4 mt-4">
                     <input 
-                      type="button" 
+                      type="submit" 
                       value="S'inscrire" 
                       class="btn violet_gradient_btn w-100"/>
 

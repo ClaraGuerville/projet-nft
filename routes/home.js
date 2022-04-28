@@ -1,13 +1,14 @@
-/**
- * creer instance de express et du router.
- */
+//////////////
+// REQUIRES //
+//////////////
 const express = require("express");
+const homectrl = require('./../controllers/homectrl');
 
 const router = express.Router();
 
-const homectrl = require('./../controllers/homectrl');
-
-// controlers
+/////////////////
+//  GET & POST //
+/////////////////
 /**
  * défini les routes
  * celui de la page d'accueil : du get
@@ -15,6 +16,9 @@ const homectrl = require('./../controllers/homectrl');
  * correspond à notre controler
  * récupère sa méthode homeIndex
  */
-router.get('/', homectrl.homeIndex)
+router.get('/', (req, res)=>{
+    console.log('ok')
+})
+// router.get('/', homectrl.homeIndex)
 
 module.exports = router;
