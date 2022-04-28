@@ -139,35 +139,6 @@ $theme-colors: (
     }    
 }
 
-.fence{
-  display: flex;
-  justify-content: center;
-}
-
-.raillings{
-  width: 90vw;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  justify-content: center;
-  grid-gap: 30px;
-}
-
-.postcard{
-  border: .5px solid;
-  border-radius: 5px;
-  /* Au hover */
-  transition: 0.5s ease;
-  cursor: pointer;
-  background-color: $bright;
-}
-
-.customCard{
-  width: 300px;
-  height: 250px;
-  border-radius: 5px;
-}
-
 .card-radius{
   border-radius: 20px;
   border: 1px solid;
