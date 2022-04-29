@@ -1,15 +1,26 @@
-const express = require('express');
-// instance du routeur
+//////////////
+// REQUIRES //
+//////////////
+const express = require("express");
+const homectrl = require('./../controllers/homectrl');
+
 const router = express.Router();
 
-// controllers
-const homeCtrl = require('../controllers/homeCtrl');
+/////////////////
+//  GET & POST //
+/////////////////
+/**
+ * défini les routes
+ * celui de la page d'accueil : du get
+ * qd personne met '/' dans nav, t'appelle du ctrl
+ * correspond à notre controler
+ * récupère sa méthode homeIndex
+ */
+router.get('/', (req, res)=>{
+    // console.log('ok')
+    res.render('home/index', {user: req.session.user});
 
-// routes
-// en premier paramètre: l'url qu'il faut intercepter
-router.get('/', (resquest, response) =>{
-    // rendre la vue
-    response.render('home/index');
-});
+})
+// router.get('/', homectrl.homeIndex)
 
 module.exports = router;

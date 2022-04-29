@@ -1,40 +1,71 @@
-const express = require('express');
+/*ROUTE ROUTE ROUTE ROUTE ROUTE ROUTE ROUTE */
 
+//////////////
+// REQUIRES //
+//////////////
+
+// besoin de lexpress
+const express = require('express');
+// besoin du ctrl
+const albumctrl = require('./../controllers/albumctrl');
+// get router
 const router = express.Router();
 
-// CONTROLLERS
-const albumCtrl = require('../controllers/albumCtrl');
-
-// console.log(albumCtrl);
-
-router.get('/create', albumCtrl.create_get);
-
-router.post('/create', albumCtrl.create_post);
-
-// Cette route appelle la méthode index
-router.get('/', albumCtrl.index);
-
-
-
-
-
-
-router.post('/show/:id', (request, response) => {
-    console.log(request.body);
-    // On passe un objet, en PHP on passwe un tableau à la methode render
-    response.render('album/show', {success: 'post traité !'});
+/**
+ * Intercepter type get si qqn tape 'create' afficher le album/create
+ * albumctrl.create
+ */
+router.get('/create', (req, res)=>{
+	// chemin vers le formulaire
+	res.render('album/create');
 });
 
-router.post('/edit/:id', (request, response) => {
-    console.log(request.body);
-    // On passe un objet, en PHP on passwe un tableau à la methode render
-    response.render('album/edit', {success: 'post traité !'});
+/**
+ * Intercepter type post s'il existe
+ *
+ * Pour form pas long :
+ * title: req.body.title, etc.
+ * 
+ * Sinon : spread operator : '...' dans un autre obj pour récupérer toutes les infos en réutilisant les clés.
+ */
+const Album = require('./../models/album');
+router.post('/create', (req, res, next)=>{
+	// persister une données
+	const album = new Album({
+		// recupère tout et le store
+		...req.body
+	});
+
+	/**
+	 * convention : err, result (:/ obj ou autre).
+	 * php : fait tout, ici, method save.
+	 */
+	album.save((err, result)=>{
+		// si error, cl.
+		if (err) console.log(err);
+		// sinon : chemin vers la liste des albums
+		console.log(result)
+		res.redirect('/albums');
+	});
 });
 
-router.post('/delete/;id', (request, response) => {
-    console.log(request.body);
-    response.refirect('/');
+/**
+ * intercept edit & id, rendre le formulaire du edit 
+ */
+router.get('/edit:id', (req, res)=>{
+	res.render('album/edit');
 });
 
+router.post('/edit:id', (req, res)=>{
+	res.render('album/edit');
+});
+
+/**
+ * renvoyer à la page index
+ */
+router.get('/', (req, res, next)=>{
+	// chemin vers la liste des albums
+	res.render('album/index');
+});
 
 module.exports = router;

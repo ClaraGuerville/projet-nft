@@ -1,70 +1,103 @@
-const express = require('express');
+//////////////
+// REQUIRES //
+//////////////
 
+// import mongoose ORM
 const mongoose = require('mongoose');
-// Module natif pour acceder au chemin des fichiers
+
+// module natif pour récup les chemins des fichiers
 const path = require('path');
 
+// import fwk express
+const express = require('express');
 
-
-const password = require('./configurations/const');
-// console.log(password);
-// ne pas oublier de retirer les chevrons <password> avec le mot de passe
-// const dsn = `mongodb+srv://nftuser:<password>@cluster0.ox4r2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
-// const dsn = `mongodb+srv://nftuser:${password}@cluster0.ox4r2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
-const dsn = `mongodb+srv://nftuser:t9xLXM3BNYv9gC8L@cluster0.ox4r2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
-
-
+const session = require('express-session');
 const cookieParser = require('cookie-parser');
-const session = require('express-session')
 
-// connexion DB
- mongoose.connect(dsn);
+// const PWD = require('./constants').password;
 
-// routers
+// data source name : chaine vers la bdd 
+const dsn = 'mongodb+srv://sirius:Mongodb42.@cluster0.zkaph.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
+// récupère le rendu du router de home.js
 const homeRouter = require('./routes/home');
-const albumRouter = require('./routes/album');
+// apporte dans app 2eme router
+const albumsRouter = require('./routes/album');
+// importe routes du user
+const usersRouter = require('./routes/user');
 
-const productCtrl = require('./routes/product');
+////////////////////////
+// CONNEXION DATABASE //
+////////////////////////
+mongoose.connect(dsn);
+
+///////////////////
+// App instance  //
+///////////////////
+// new : par déclaration qd plus gourment, mais sinon objet 
 const app = express();
 
-// définir un moteur de template
+//////
+//  //
+//////
+/**
+ * pour utiliser un moteur de template, lui dit.
+ * avec api pas besoin de faire ça car par de vue. application monolitique, si.
+ * peut recevoir var indépendemment du coté serveur.
+ * sécurise url. Permet de faire de l'héritage (pas ejs mais les autres oui) 
+ * lister les actions, et en face, appelle ctlr.
+ */
 app.set('view engine', 'ejs');
 
-// middleware traitement formulaire (permet d'intercepter le contenu des requetes)
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+/**
+ * midllewares traitement des données. pourvoir intercepter le contenu des requetes.
+ * parse du json et le met dans la request
+ * renvoient object JS
+ */
+app.use(express.json()); 
+app.use(express.urlencoded({extended: false }));
+// indiquer les ressources avec le static()
+app.use(express.static(path.join(__dirname, 'public')))
 
-// Indiquer les ressources avec le static
-app.use(express.static(path.join(__dirname, 'pulbic')));
-
-// ------------------------------------------------------------
+// use cookie & session
 app.use(cookieParser());
 app.set('trust proxy', 1) // trust first proxy
-// app.use(session);
 app.use(session({
-// secret represente le cookie de la session
-    secret: 'miahfgôgunzrùobu',
+    secret: 'vnfjsghzek4',
     resave: false,
     saveUninitialized: true,
-    cookie: {
-        // secure à false car on est en http et pas https
-        //  secure: false,
-         _expires: 1000*60*60
-    }
-  }))
-// -------------------------------------------------------------
+    cookie: { 
+        secure: false,
+        _expires: 1000*60*60
+    } 
+}));
+
+/**
+ * js : pour que les req soit intercepter, lui dire s c du get, post etc.
+ * créer middleware pour intercepter requete
+ * peut importe requete qu'on envoie (get/post), use intercepte
+ *
+ * middleware 'use(avec function callback)''
+
+ * quand req reçu, doit dire de faire qqch avec la reponse. Si ne dit pas quoi faire avec la réponse, client est en attente de faire qqch.
+ *
+ * defini l'entete, renvoie json si api, affiche vue si mvc etc...
+ */ 
 app.use(homeRouter);
-app.use('/album', albumRouter);
+/**
+ * routes de l'album sont dispo
+ * préfixe pour les autres routes pour lisibilité.
+ */
+app.use('/albums', albumsRouter);
 
-app.use('/products', productCtrl);
+// use the 'users' as the userRouter
+app.use('/', usersRouter);
 
-// On fait une fonction callback
-//On met en place un middleware (use) il peut intercepter tout type de requete (GET, POST , etc)
- 
-// app.use((request, response) => {
-//     // Faire quelquechose
-//     response.send('Message reçu et nodemon actif');
-// });
-
-// On exporte notre application
+/**
+ * export module : permet d'utiliser cette var dans un autre fichier
+ * chaque fichier = brique à utiliser dans un autre fichier. c pk on fait le require.
+ * module existe dans environnemnet JS
+ * créer un module à partir cde cela et permet de faire des require dans un autre fichier.
+ * Car dans node, chaque fichier est indépendt comme html et != php
+ */
 module.exports = app;

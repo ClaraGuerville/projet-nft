@@ -2,15 +2,104 @@
 //              Lucile's part               //
 //////////////////////////////////////////////
 /*IMPORT*/
-@import 'ld-variables.scss';
+@import './variables';
+@import './mixins';
 
-/*GENERAL*/
-.small-caps{font-variant-caps: all-small-caps }
-.bb{border: 1px solid red }
+@import './../../node_modules/bootstrap/scss/functions';
+@import './../../node_modules/bootstrap/scss/variables';
+@import './../../node_modules/bootstrap/scss/mixins';
+@import './../../node_modules/bootstrap/scss/utilities';
 
-/*LOGIN*/
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "purple":     $purple,
+  "light-purple": $light-purple,
+  "dark-purple": $dark-purple,
+  "obscur": $obscur,
+  "bright": $bright,
+  "gradient": $gradient,
+  "gradient-hover": $gradient-hover
+);
 
-/*REGISTER*/
+@import './../../node_modules/bootstrap/scss/bootstrap.scss';
+
+/*GENERAL STYLES*/
+
+/* btn primary with gradient */
+.violet_gradient_btn{
+	padding: 16px 40px;
+	background: linear-gradient(90deg, #843BE2 0%, #6B10FF 100%);
+	border-radius: 12px;
+
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 21px;
+	letter-spacing: 0.03em;
+
+	color: #FFFFFF;
+}
+
+/* Texts & link's styles */
+.violet_gradient_btn:hover{
+	color: white;
+	background: linear-gradient(90deg, #6B10FF 0%, #843BE2 100%);
+}
+
+.small_purple_link{@include body_small($purple); }
+
+.small_text{font-size: $body_small; }
+
+.no-decoration{text-decoration: none; }
+
+.small-caps{font-variant-caps: all-small-caps; }
+
+.no-border{
+	border: none;
+}
+
+/* placements & marge */
+.flex-center{@include flex_center; }
+
+/* debug */
+.bb{border: .5px solid red }
+
+/*LOGIN & REGISTER*/
+
+// bg of the login & the register pages
+.user_form_bg {
+	height: inherit;
+	background-image: url('../img/form-image.png');
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
+}
+
+.user-form {
+	// only the first row 
+	.row:first-child {
+		min-height: 100vh;
+		// border: solid 2px blue;
+	}
+	
+	// input type text
+	&__input {
+		// appearance
+		border: solid 1px $gradient;
+		background: rgba(255, 255, 255, 0.7);
+		border-radius: 12px;
+		padding: 8px 12px;
+		// text
+		@include body_small($placeholder-grey);
+	}
+}
+
 
 /*NFT INFOS*/
 

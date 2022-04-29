@@ -1,22 +1,34 @@
+/*MODEL MODEL MODEL MODEL MODEL MODEL MODEL */
+
+//////////////
+// REQUIRES //
+//////////////
 const mongoose = require('mongoose');
 
+// destructuration car récupère qu'un shéma dans strucutre mongoose
 const {Schema} = mongoose;
 
-// Par défaut l'id se créer tout seul donc pas obligé de le définir
+/////////////////////
+// CREATION SCHEMA //
+/////////////////////
+
+// créer notre propre shéma (comme MCD/MLD)
+// bdd relationnelle
+// voilà à quoi devrait ressembler un album
 const albumSchema = new Schema({
-    // Les clés doivent avoir le même nom que les name des inputs
-    title: {
-        type: String,
-        require: true
-    },
-    author: {
-        type: String,
-        require: true
-    },
-    publishedAt: {
-        type: Date,
-        require: true
-    }
+	title: {
+		type: String,
+		required: true
+	},
+	author: {
+		type: String,
+		required: true
+	},
+	publishedAt: {
+		type: Date,
+		required: true
+	}
 });
 
-module.exports = mongoose.model('Album', albumSchema);
+// creer model, donne nom du model et l'obj
+module.exports = mongoose.model('album', albumSchema);

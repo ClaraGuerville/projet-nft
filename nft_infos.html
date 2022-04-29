@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <title>Ajout/Modifier NFT</title>
+</head>
+<body>
+    <main class="container">
+        <!-- search bar container -->
+        <div class="row">
+            <div class="col">
+                <!-- search bar -->
+                <input 
+                    id="search"
+                    type="text" 
+                    name="search" 
+                    placeholder="Rechercher un NFT dans ma collection"
+                    class="search-bar"/>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div class="row">
+            <!-- title -->
+            <div class="bb col-12">
+                <h2 class="fw-bold">Ajouter/modifier un NFT</h2>
+            </div>
+
+            <!-- form -->
+            <div class="bb col-12">
+                <div class="row">
+                    <div class="bb col-md-5">
+                        <img src="public/assets/img/nft.png" alt="Titre du NFT ici" class="w-100">
+                    </div>
+                    <div class="bb col-md-7">
+                        <div class="d-flex flex-column gap-5">
+                            <!-- title -->
+                            <div>
+                                <label for="title" class="d-block small-caps fw-light">Titre du NFT</label>
+                                <input 
+                                    id="title"
+                                    name="title"
+                                    value="Azuki #9107" 
+                                    type="text" 
+                                    class="no-border fw-bold fs-4"/>
+                            </div>
+
+                            <!-- description -->
+                            <div>
+                                <label for="textarea" class="d-block small-caps fw-light">Description</label>
+                                <textarea 
+                                    id="textarea"
+                                    name="textarea"
+                                    type="text"
+                                    class="no-border">Donec rutrum congue leo eget malesuada. Cras ultricies ligula sed magna dictum porta. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque</textarea>
+                            </div>
+
+                            <!-- price -->
+                            <div>
+                                <label for="price" class="d-block small-caps fw-light">Prix</label>
+                                <input 
+                                    id="price"
+                                    name="price"
+                                    type="text" 
+                                    value="12.3" 
+                                    class="no-border fw-bold fs-4"/>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

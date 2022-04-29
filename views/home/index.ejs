@@ -1,1 +1,5 @@
-<h1>Welcome</h1>
+<% if (locals.user) { %>
+	<p>Welcome <%= user.pseudo %></p>
+<% } else { %>
+	<p>Welcome</p>
+<% } %>
