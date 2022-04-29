@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // controllers
-const homeCtrl = require('./../controllers/home-ctrl');
+const homeCtrl = require('../controllers/homeCtrl');
 
 // routes
 // en premier paramètre: l'url qu'il faut intercepter
