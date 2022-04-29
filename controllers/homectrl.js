@@ -5,5 +5,7 @@
  */
 exports.homeIndex = (req, res)=>{
 	// rend la vue de la page d'accueil
-	res.render('home/index');
+	res.render('home/index', {user: req.session.user});
+
 };
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/assets/css/style.css">
+      <title>Connexion</title>
+  </head>
+  <body>
+      <main class="user-form container-fluid">
+
+        <!-- two part container -->
+        <div class="row">
+          <!-- image container -->
+          <aside class="user_form_bg d-none d-sm-block col-sm-5 col-md-6 ps-0">
+          </aside>
+
+          <!-- connexion form -->
+          <form action="" method="post" class="col-sm-7 col-md-6 my-sm-5 my-lg-0">
+            <div class="row flex-center h-100"> 
+              <div class="ccol-12 col-md-11 col-lg-11 col-xl-9 col-xxl-7">
+                <!-- input container --> 
+                <div class="row flex-column flex-center gap-4">
+                  <!-- form title -->
+                  <h2 class="fw-bold text-center">Connexion à votre espace</h2>
+                  <!-- peudonym input -->
+                  <div class="px-4">
+                    <label for="pseudo" class="d-block mb-2">Pseudo</label>
+                    <input
+                      id="pseudo"
+                      name="pseudo"
+                      type="text"
+                      placeholder="Saisir votre pseudo" 
+                      class="user-form__input w-100"/>
+                  </div>
+
+                  <!-- pwd input -->
+                  <div class="px-4">
+                    <label for="password" class="d-block mb-2">Mot de passe</label>
+                    <input
+                      id="password"
+                      name="password"
+                      type="text"
+                      placeholder="Saisir votre mot de passe" 
+                      class="user-form__input w-100""/>
+                      <a href="#" class="small_purple_link d-block no-decoration">Mot de passe oublié ?</a>
+                  </div>
+                  
+                  <!-- connexion button -->
+                  <div class="px-4 mt-4">
+                    <input 
+                      type="submit" 
+                      value="Se connecter" 
+                      class="btn violet_gradient_btn w-100"/>
+
+                    <span class="d-block text-center small_text mt-2">Pas de compte ? <a href="register.html" class="small_purple_link no-decoration">Inscrivez-vous</a>.</span>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+  </body>
+</html>

@@ -17,7 +17,9 @@ const router = express.Router();
  * récupère sa méthode homeIndex
  */
 router.get('/', (req, res)=>{
-    console.log('ok')
+    // console.log('ok')
+    res.render('home/index', {user: req.session.user});
+
 })
 // router.get('/', homectrl.homeIndex)
 

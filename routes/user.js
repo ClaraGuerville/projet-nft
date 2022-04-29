@@ -14,6 +14,8 @@ const router = express.Router();
 // get the user ctrl
 // const albumctrl = require('./../controllers/userctrl');
 
+
+
 router.get('/register', (req, res, next)=>{
 	res.render('user/register');
 });
@@ -42,6 +44,33 @@ router.post('/register', (req, res, next)=>{
 		})
     });
 
+})
+
+// route login
+router.get('/login', (req, res)=>{
+	res.render('user/login');
+});
+
+router.post('/login', (req, res)=>{
+	User.findOne({
+		pseudo: req.body.pseudo
+	}, (err, user)=>{
+		if (err || !user) {
+			res.redirect('/login');
+			return;
+		}
+
+		bcrypt.compare(req.body.password, user.password, (err, result)=>{
+			if (err || !result) {
+				res.redirect('/login');
+				return;
+			}
+
+			delete user.password;
+			req.session.user = user;
+			res.redirect('/');
+		});
+	});
 })
 
 module.exports = router;

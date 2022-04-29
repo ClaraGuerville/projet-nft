@@ -12,7 +12,7 @@ const path = require('path');
 const express = require('express');
 
 const session = require('express-session');
-const cookie = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 
 // const PWD = require('./constants').password;
 
@@ -60,7 +60,7 @@ app.use(express.urlencoded({extended: false }));
 app.use(express.static(path.join(__dirname, 'public')))
 
 // use cookie & session
-app.use(cookie);
+app.use(cookieParser());
 app.set('trust proxy', 1) // trust first proxy
 app.use(session({
     secret: 'vnfjsghzek4',
@@ -68,8 +68,8 @@ app.use(session({
     saveUninitialized: true,
     cookie: { 
         secure: false,
-        expires: 1000*60*60
-    }
+        _expires: 1000*60*60
+    } 
 }));
 
 /**
@@ -91,7 +91,7 @@ app.use(homeRouter);
 app.use('/albums', albumsRouter);
 
 // use the 'users' as the userRouter
-app.use('/users', usersRouter);
+app.use('/', usersRouter);
 
 /**
  * export module : permet d'utiliser cette var dans un autre fichier
