@@ -1,4 +1,5 @@
 @import './variables';
+@import './mixins';
 
 @import './../../node_modules/bootstrap/scss/functions';
 @import './../../node_modules/bootstrap/scss/variables';
@@ -20,10 +21,9 @@ $theme-colors: (
   "dark-purple": $dark-purple,
   "obscur": $obscur,
   "bright": $bright,
-  "gradient": $gradient,
-  "gradient-hover": $gradient-hover,
+  "placeholder-grey": $placeholder-grey,
+  "light-grey": $light-grey
 );
-
 
 @import './../../node_modules/bootstrap/scss/bootstrap.scss';
 
@@ -53,14 +53,6 @@ $theme-colors: (
   background-color: $bright;
 }
 
-.bgc-gradient{
-  background-color: $gradient;
-}
-
-.bgc-gradient-hover{
-  background-color: $gradient-hover;
-}
-
 .circle {
   width: 3rem;
   height: 3rem;
@@ -86,15 +78,6 @@ $theme-colors: (
     }
 }
 
-.btnFilter{
-  width: 151px;
-  height: 43px;
-  border-radius: 12px;
-  padding: 8px, 16px, 8px, 16px;
-  color: $obscur;
-  margin: 0px 12px;
-}
-
 .btnCreate{
   width: 198px;
   height: 43px;
@@ -103,6 +86,32 @@ $theme-colors: (
   padding: 12px, 40px, 12px, 40px;
   font-weight: bold;
   margin: 0px 12px;
+}
+
+.btn-gradient {
+  letter-spacing: 0.6px ;
+  background: linear-gradient(289deg, rgba(132,59,226,1) 0%, rgba(107,16,255,1) 100%);
+} 
+
+.btnTemplate{
+  width: 150px;
+  height: 40px;
+  border-radius: 12px;
+  padding: 8px, 16px, 8px, 16px;
+  color: $obscur;
+  margin: 0px 12px;
+  background: $light-grey;
+}
+
+.btnSetting{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: red;
+  margin-left: 280px;
+  margin-top: 20px;
 }
 
 .preFooterManagement{
@@ -117,11 +126,11 @@ $theme-colors: (
       text-align: center;
     }
     &__button{
-      width: 304px;
-      height: 53px;
+      width: 300px;
+      height: 50px;
       border-radius: 12px;
-      background-color: $gradient;
       padding: 16px, 40px, 16px, 40px;
+      @include gradient;
     }
 }
 
@@ -147,4 +156,21 @@ $theme-colors: (
 .img-radius{
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+.profil-circle{
+  margin-left: 300px;
+  margin-top: 50px;
+  transform: scale(2, 2);
+}
+
+.search-bar {
+  // Il faut remettre l'ancienne width autre que 330px
+	width: 330px;
+	padding: 10px 30px;
+	border-radius: 12px;
+	border: 0;
+
+	background: $light-grey;
+	color: $placeholder-grey;
 }
