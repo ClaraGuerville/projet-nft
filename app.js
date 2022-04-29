@@ -14,7 +14,7 @@ const password = require('./configurations/const');
 const dsn = `mongodb+srv://nftuser:t9xLXM3BNYv9gC8L@cluster0.ox4r2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 
-const cookie = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 const session = require('express-session')
 
 // connexion DB
@@ -38,18 +38,18 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'pulbic')));
 
 // ------------------------------------------------------------
-app.use(cookie);
+app.use(cookieParser());
 app.set('trust proxy', 1) // trust first proxy
 // app.use(session);
 app.use(session({
 // secret represente le cookie de la session
-    secret: 'keyboard cat',
+    secret: 'miahfgôgunzrùobu',
     resave: false,
     saveUninitialized: true,
     cookie: {
         // secure à false car on est en http et pas https
-         secure: false,
-         expires: 1000*60*60
+        //  secure: false,
+         _expires: 1000*60*60
     }
   }))
 // -------------------------------------------------------------
