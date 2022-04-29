@@ -1,5 +1,7 @@
 @mixin gradient {
     background: linear-gradient(289deg, rgba(132,59,226,1) 0%, rgba(107,16,255,1) 100%);
+}
+
 @mixin flex_center {
 	justify-content: center;
 	align-items: center;

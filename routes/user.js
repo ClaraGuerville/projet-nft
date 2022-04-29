@@ -17,6 +17,7 @@ const router = express.Router();
 
 
 router.get('/register', (req, res, next)=>{
+	console.log('debugage')
 	res.render('user/register');
 });
 
@@ -48,6 +49,7 @@ router.post('/register', (req, res, next)=>{
 
 // route login
 router.get('/login', (req, res)=>{
+	console.log('debugage')
 	res.render('user/login');
 });
 

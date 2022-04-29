@@ -22,7 +22,6 @@ const dsn = 'mongodb+srv://sirius:Mongodb42.@cluster0.zkaph.mongodb.net/myFirstD
 // récupère le rendu du router de home.js
 const homeRouter = require('./routes/home');
 // apporte dans app 2eme router
-const albumsRouter = require('./routes/album');
 // importe routes du user
 const usersRouter = require('./routes/user');
 
@@ -88,7 +87,6 @@ app.use(homeRouter);
  * routes de l'album sont dispo
  * préfixe pour les autres routes pour lisibilité.
  */
-app.use('/albums', albumsRouter);
 
 // use the 'users' as the userRouter
 app.use('/', usersRouter);
