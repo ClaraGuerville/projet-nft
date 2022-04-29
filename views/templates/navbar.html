@@ -1,0 +1,87 @@
+            <!-- <div class="row">
+                <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+
+                        <a class="navbar-brand fw-bold" href="#"><img src="public/assets/img/logo.svg" alt="Logo de Lobos"> Lobos</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title"><img src="public/assets/img/logo.svg" alt="Logo"> Lobos</h5>
+                                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                
+                                <ul class="navbar-nav flex-grow-1 pe-3 text-center">
+        
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Accueil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Explorer</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Créer ma collection</a>
+                                    </li>
+                                </ul>
+                                
+                                    <div class="d-flex flex-column">  
+                                        <ul class="navbar-nav flex-grow-1 pe-3 text-center">             
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">S'inscrire</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="">Se connecter</a>
+                                            </li> 
+                                        </ul>
+                                    </div>
+                                
+                            </div>
+                        </div>            
+                </nav>
+            </div> -->
+
+
+        <!-- ----------NAVBAR N°2------------- -->
+
+        <div class="container pt-2 pb-4">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand fw-bold" href="#"><img src="/assets/img/logo.svg" alt="Logo"> Lobos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark mx-3" href="">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark mx-3" href="">Explorer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark mx-3" href="">Créer ma collection</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="d-flex nav-puce justify-content-center">
+                        <% if (locals.user) { %>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark mx-3" href="">Ma galerie</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="">Déconnexion</a>
+                            </li>
+                        <% } else { %>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark mx-3" href="">S'inscrire</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="">Se connecter</a>
+                            </li> 
+                        <% } %>
+                                                            
+                    </div>
+                </div>
+            </nav>
+        </div> 
