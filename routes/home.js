@@ -1,6 +1,6 @@
-//////////////
-// REQUIRES //
-//////////////
+//////////////////////
+// ROUTE'S REQUIRES //
+//////////////////////
 const express = require("express");
 const homectrl = require('./../controllers/homectrl');
 
@@ -17,10 +17,12 @@ const router = express.Router();
  * récupère sa méthode homeIndex
  */
 router.get('/', (req, res)=>{
-    // console.log('ok')
-    res.render('home/index', {user: req.session.user});
 
+    // res.render('home/index', {user: req.session.user});
+    router.get('/', homectrl.homeIndex)
 })
-// router.get('/', homectrl.homeIndex)
 
+/////////////
+// EXPORTS //
+/////////////
 module.exports = router;

@@ -1,11 +1,16 @@
-/*MODEL MODEL MODEL MODEL MODEL MODEL MODEL */
-
-// import mongo
+//////////////////////
+// MODEL'S REQUIRES //
+//////////////////////
+// mongo
 const mongoose = require('mongoose');
+// value validation : unique in ddb
 const UniqueValidator = require('mongoose-unique-validator');
-
+// defragmentation of mongoose, get the Schema
 const {Schema} = mongoose;
 
+//////////////
+// USER DEF //
+//////////////
 const userSchema = new Schema({
 	pseudo: {
 		type: String, 
@@ -21,7 +26,10 @@ const userSchema = new Schema({
 	}
 });
 
-// vérification d'unicité, si existe : erreur
+// register the uniqueness verification plugin for the userSchema
 userSchema.plugin(UniqueValidator);
 
+////////////
+// EXPORT //
+////////////
 module.exports = mongoose.model('User', userSchema);

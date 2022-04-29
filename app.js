@@ -11,11 +11,11 @@ const path = require('path');
 // import fwk express
 const express = require('express');
 
+// session & cookies
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
 // const PWD = require('./constants').password;
-
 // data source name : chaine vers la bdd 
 const dsn = 'mongodb+srv://sirius:Mongodb42.@cluster0.zkaph.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
@@ -26,9 +26,7 @@ const albumsRouter = require('./routes/album');
 // importe routes du user
 const usersRouter = require('./routes/user');
 
-////////////////////////
-// CONNEXION DATABASE //
-////////////////////////
+// connexion ddb
 mongoose.connect(dsn);
 
 ///////////////////
@@ -37,9 +35,9 @@ mongoose.connect(dsn);
 // new : par déclaration qd plus gourment, mais sinon objet 
 const app = express();
 
-//////
-//  //
-//////
+//////////
+// USES //
+//////////
 /**
  * pour utiliser un moteur de template, lui dit.
  * avec api pas besoin de faire ça car par de vue. application monolitique, si.
