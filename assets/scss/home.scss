@@ -164,7 +164,7 @@ $theme-colors: ("purple": $purple,
   .element-1 {
     grid-row: 1 /span 2;
     grid-column: 1 / 2;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 120%), url(/public/assets/img/art.png);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 120%), url(/assets/img/art.png);
     background-repeat: no-repeat, no-repeat;
     background-position: center;
     background-size: cover;
@@ -174,7 +174,7 @@ $theme-colors: ("purple": $purple,
   .element-2 {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 120%), url(/public/assets/img/metaverse.JPG);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 120%), url(/assets/img/metaverse.JPG);
     background-repeat: no-repeat, no-repeat;
     background-position: top center;
     background-size: cover;
@@ -184,7 +184,7 @@ $theme-colors: ("purple": $purple,
   .element-3 {
     grid-row: 1 / 2;
     grid-column: 3 / 4;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 120%), url(/public/assets/img/photography.jpg);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 120%), url(/assets/img/photography.jpg);
     background-repeat: no-repeat, no-repeat;
     background-position: center;
     background-size: cover;
@@ -194,7 +194,7 @@ $theme-colors: ("purple": $purple,
   .element-4 {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 120%), url(/public/assets/img/music.JPG);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 120%), url(/assets/img/music.JPG);
     ;
     background-repeat: no-repeat, no-repeat;
     background-position: top center;
@@ -205,7 +205,7 @@ $theme-colors: ("purple": $purple,
   .element-5 {
     grid-row: 2 / 3;
     grid-column: 3 / 4;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 120%), url(/public/assets/img/sport.JPG);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 120%), url(/assets/img/sport.JPG);
     background-repeat: no-repeat, no-repeat;
     background-position: center;
     background-size: cover;
