@@ -16,10 +16,11 @@ exports.create_post = (request, response) => {
     if(!request.session.user){
         response.redirect('/login');
     }
-    
+    console.log(request.file);
     const product = new Product({
         ...request.body,
-        owner: request.session.user._id
+        owner: request.session.user._id,
+        oeuvre: request.file.filename
     });
 console.log(request.body);
     console.log('product', product);
@@ -31,6 +32,8 @@ console.log(request.body);
     });
 };
 
-exports.index = ((request, response) => {
-    response.render('products/index')
-});
+exports.index = (request, response) => {
+    Product.find({}, (error, products) => {
+        response.render('products/index', {products})
+    })
+};
