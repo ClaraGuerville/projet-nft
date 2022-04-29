@@ -18,49 +18,84 @@
 
     
 
-    <div class="row">
+    <!-- <div class="row">
         <div class="d-flex">
 
-                <!-- search bar -->
-                <input 
-                id="search"
-                type="text" 
-                name="search" 
-                placeholder="Rechercher un NFT dans ma collection"
-                class="search-bar"/>
-         
+            <input id="search" type="text" name="search" placeholder="Rechercher un NFT dans ma collection" class="search-bar"/>
+        
+
+            <div class="dropdown d-inline">
+                <button class="btn  dropdown-toggle btnTemplate mx-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="public/assets/img/category.svg" alt="">
+                    Catégories
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Art</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Metavers</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Photographie</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Musique</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Sport</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-toggle btnTemplate" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Classé par:
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Prix</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Popularité</a></li>
+                </ul>
+            </div>
+        </div> -->
     
-                <div class="dropdown d-inline-block">
-                    <button class="btn btn-outline-secondary dropdown-toggle opacity-50 text-black mx-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+
+        <div class="row">
+    
+            <div class="col-12 col-md-4 d-flex justify-content-center my-3 my-md-0">
+                <form action="">
+                    <input id="search" type="text" name="search" placeholder="Rechercher un NFT dans ma collection" class="search-bar"/>
+                </form>   
+            </div>            
+            <div class="col-6 col-md-4 d-flex justify-content-center my-3 my-md-0">
+                <div class="dropdown d-inline">
+                    <button class="dropdown-toggle btnTemplate mx-2" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="public/assets/img/category.svg" alt="">
                         Catégories
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Art</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Metavers</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Photographie</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Musique</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Sport</a></li>
+                        <li><a class="dropdown-item" href="#">Art</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Metavers</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Photographie</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Musique</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sport</a></li>
                     </ul>
-                  </div>
-        </div>
-        
+                </div>
+            </div>
+            
+            <div class="col-6 col-md-4 d-flex justify-content-center my-3 my-md-0">
+                <div class="dropdown">
+                    <button class="dropdown-toggle btnTemplate" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Classé par:
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Prix</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Popularité</a></li>
+                    </ul>
+                </div>  
+            </div>
+            
 
-            <div class="dropdown">
-                <button class="btn btn-outline-secondary dropdown-toggle opacity-50 text-black" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Classé par:
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Prix</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Popularité</a></li>
-                </ul>
-              </div>
-    </div>  
+        </div>  
 
      <div class="row justify-content-center px-md-5">     
         <div class="col-10 col-md-4 col-lg-3 my-4">
@@ -414,7 +449,7 @@
                 <h2 class="preFooterManagement__title">Explorer la galerie</h2>
             </div>
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <p class="preFooterManagement__paragrpah">Découvrez plus de 1M de NFTs de tous horizons</p>
+                <p class="preFooterManagement__paragraph">Découvrez plus de 1M de NFTs de tous horizons</p>
             </div>
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <button class="preFooterManagement__button text-light"><a href=""></a>Explorer le marketplace</a></button>
@@ -422,13 +457,12 @@
         </div>
         <div class="row footerManagement pt-3">
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <p class="footerManagement__paragrpah">Travail réalisé dans le cadre d'un exercice de l'école des métiers du numérique, La Manu.</p>
+                <p class="footerManagement__paragraph">Travail réalisé dans le cadre d'un exercice de l'école des métiers du numérique, La Manu.</p>
             </div>
             <div class="col-12 d-flex justify-content-center align-items-center">
-                <p class="footerManagement__paragrpah footerManagement__paragrpah--bold">Réalisé par Lucile, Wesley, Clara</p>
+                <p class="footerManagement__paragraph footerManagement__paragraph--bold">Réalisé par Lucile, Wesley, Clara</p>
             </div>
         </div>
     </footer>
-   
 </body>
 </html>
