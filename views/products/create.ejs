@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lobos est la plus grande plateforme de NFTs destinée aux étudiants. Chaque création authentique s'intègre à l'art de l'Ethereum dont l'œuvre peut s'acquérir via notre marketplace digitale. Les artistes nous font déja confiance et bientôt vous aussi">
+    
+    <!-- STYLES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <!-- SCRIPTS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>projet-nft</title>
+</head>
+<body>
+    <h1>Ajouter un produit</h1>
+    <% if(locals.success){ %>
+        <p><%= success %></p>
+    <%} %>
+    <form action="/products/create" method="POST">
+        <div>
+            <label for="title">Titre</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <div>
+            <label for="oeuvre">Oeuvre</label>
+            <input type="text" id="oeuvre" name="oeuvre">
+        </div>
+        <div>
+            <label for="artist">Artiste</label>
+            <input type="text" id="artist" name="artist">
+        </div>
+        <div>
+            <label for="owner">Propriétaire</label>
+            <input type="text" id="owner" name="owner">
+        </div>
+
+        <button type="submit">Enregistrer</button>
+    </form>
+</body>
+</html>
