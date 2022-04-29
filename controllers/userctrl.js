@@ -1,5 +1,10 @@
+// (CTRL) import bcrypt
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
+const User = require('./../models/user');
+
 exports.login_get = (req, res)=>{
-	console.log('debugage')
 	res.render('user/login');
 }
 
@@ -26,7 +31,6 @@ exports.login_post = (req, res)=>{
 }
 
 exports.register_get = (req, res, next)=>{
-	console.log('debugage')
 	res.render('user/register');
 }
 

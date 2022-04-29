@@ -4,63 +4,14 @@
 	<p>Welcome</p>
 <% } %> -->
 
-<!DOCTYPE html>
-<html lang="fr">
+<%- include('./../templates/header.html') -%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <title>Homepage</title>
-</head>
 
 <body class="font-style">
       <!--            Section : Navbar            -->
-    <div class="container pt-2 pb-4">
-        <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand fw-bold" href="#"><img src="/assets/img/logo.svg" alt="Logo"> Lobos</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark mx-3" href="">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark mx-3" href="">Explorer</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark mx-3" href="">Créer ma collection</a>
-                        </li>
-                    </ul>
-                  
-                    <div class="d-flex nav-puce justify-content-center">
-						<% if (locals.user) { %>
-							<li class="nav-item">
-                                <a class="nav-link text-dark mx-3" href="">Ma gallerie</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="">Déconnexion</a>
-                            </li>
-						<% } else { %>
-							<li class="nav-item">
-                                <a class="nav-link text-dark mx-3" href="">S'inscrire</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="">Se connecter</a>
-                            </li> 
-						<% } %>
-							 
-						
-                                                                                         
-                    </div>
-                </div>
-        </nav>
-    </div> 
-    <!--            Fin section : Footer            -->
+      <%- include('./../templates/navbar.html') -%>
+
+   
 
     <!--            Section : Header            -->
     <div class="container section-header pt-5">
@@ -69,7 +20,7 @@
                 <h1 class="heading-1 mt-5">Découvrez une grande sélection de NFTs</h1>
                 <p class="baseline">Achetez et revendez les NFTs des plus grands artistes du monde entier</p>
                 <div class="btn-section mt-3">
-                    <button type="button" class="btn btn-gradient me-2">Explorer</button>
+                    <button type="button" class="btn btn-gradient me-2"><a class="text-light no-decoration" href="">Explorer</a></button>
                     <button type="button" class="btn btn-outline-gradient border-3">Créer</button>
                 </div>
             </div>

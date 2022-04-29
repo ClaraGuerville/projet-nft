@@ -4,9 +4,7 @@
 // REQUIRES //
 //////////////
 
-// (CTRL) import bcrypt
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+
 // get the express
 const express = require('express');
 // get the router

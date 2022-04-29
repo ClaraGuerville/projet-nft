@@ -10,17 +10,29 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
-    image: {
-        type: String
-    },
-    creator: {
+    artist: {
         type: String,
+        required: true
+    },
+    price: {
+        type: Number,
         required: true
     },
     owner: {
         // Clé étrangère
         type: Schema.Types.ObjectId,
         ref: 'User'
+    },
+    oeuvre: {
+        type: String
+    },
+    category: {
+        // Clé étrangère
+        type: Schema.Types.ObjectId,
+        ref: 'Category'
+    },
+    likeCounter: {
+        type: Number
     }
 });
 

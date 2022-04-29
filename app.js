@@ -24,7 +24,7 @@ const homeRouter = require('./routes/home');
 // apporte dans app 2eme router
 // importe routes du user
 const usersRouter = require('./routes/user');
-
+const productsRouter = require('./routes/product');
 ////////////////////////
 // CONNEXION DATABASE //
 ////////////////////////
@@ -90,6 +90,8 @@ app.use(homeRouter);
 
 // use the 'users' as the userRouter
 app.use('/', usersRouter);
+
+app.use('/products', productsRouter);
 
 /**
  * export module : permet d'utiliser cette var dans un autre fichier

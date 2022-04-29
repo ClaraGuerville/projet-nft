@@ -24,17 +24,30 @@
             <input type="text" id="title" name="title">
         </div>
         <div>
-            <label for="oeuvre">Oeuvre</label>
-            <input type="text" id="oeuvre" name="oeuvre">
-        </div>
-        <div>
             <label for="artist">Artiste</label>
             <input type="text" id="artist" name="artist">
         </div>
         <div>
-            <label for="owner">Propriétaire</label>
-            <input type="text" id="owner" name="owner">
+            <label for="price">Prix</label>
+            <input type="text" id="price" name="price">
         </div>
+        <div>
+            <label for="category">Category</label>
+            <select name="category" id="category">
+                <option value="">Veuillez choisir une catégorie</option>
+                <% categories.forEach((category) =>{ %>
+                    <option value="<%= category._id %>"><%= category.name %></option>
+                <% }) %>
+
+            </select>
+        </div>
+        <div>
+            <label for="oeuvre">Oeuvre</label>
+            <input type="file" id="oeuvre" name="oeuvre">
+        </div>
+
+       
+
 
         <button type="submit">Enregistrer</button>
     </form>
